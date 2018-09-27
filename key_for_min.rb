@@ -2,5 +2,13 @@
 # Given a hash with numeric values, return the key for the smallest value
 
 def key_for_min_value(name_hash)
+  lowest = Float::Infinity
+  name_of_lowest = nil
 
+  name_hash.each do |name, price|
+    if price < lowest
+      lowest = price
+      name_of_lowest = name
+    end
+    name_of_lowest
 end
